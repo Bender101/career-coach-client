@@ -26,7 +26,6 @@ const AddUserSkills = () => {
   const { id } = store;
   const [form] = Form.useForm();
   const dispatch = useDispatch();
-  console.log(store.id);
   useEffect(() => {
     dispatch(allSkillsFromSelect());
   }, []);
@@ -41,7 +40,6 @@ const AddUserSkills = () => {
     e.preventDefault();
     setRadio(e.target.value);
   };
-  // console.log(radio);
 
   const submitHandler = (e) => {
     e.preventDefault();

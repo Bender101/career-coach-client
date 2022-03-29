@@ -11,7 +11,6 @@ import {
 import { disableSpinner, enableSpinner } from "./spinnerAction";
 
 export const updateRate = (rate) => async (dispatch, setState) => {
-  // console.log("data", rate);
   try {
     const response = await fetch("/users/profile/changerate", {
       method: "PUT",
@@ -21,13 +20,11 @@ export const updateRate = (rate) => async (dispatch, setState) => {
       body: JSON.stringify(rate),
     });
     const data = await response.json();
-    console.log("data", data);
     dispatch({
       type: UPDATE_RATE_SKILL,
       payload: data,
     });
   } catch (error) {
-    console.log(error.message);
     return error.message;
   }
 };
@@ -48,12 +45,10 @@ export const allSkillsFromSelect = () => async (dispatch, setState) => {
 export const allSkillsFromSkills = (id) => async (dispatch, setState) => {
   try {
 
-    console.log('id in allSkills ========>>>>>>', id);
     const response = await fetch(
       `/users/profile/allUserSkillsFromSkills/${id}`
     );
     const allUserSkillFromServer = await response.json();
-    //console.log('allUserSkillFromServer ===== >', allUserSkillFromServer);
     const result = allUserSkillFromServer.map((el) => {
       return {
         skill: el.Skill.skill,
@@ -64,7 +59,6 @@ export const allSkillsFromSkills = (id) => async (dispatch, setState) => {
         category: "skills",
       };
     });
-    // return ("====", result);
 
     dispatch({
       type: ALL_SKILL_FROM_SKILL,

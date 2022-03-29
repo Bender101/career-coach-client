@@ -1,4 +1,4 @@
-import './SkillsStudy.css'
+import "./SkillsStudy.css";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { allSkillsFromLearn } from "../../redux/actions/userSkills";
@@ -11,7 +11,6 @@ import {
 
 const SkillsStudy = () => {
   const skillsLearn = useSelector((store) => store?.userSkillsLearn);
-  // console.log('skillsLearn',skillsLearn);
   const id = useSelector((store) => store?.users.id);
   const dispatch = useDispatch();
   const spinner = useSelector((store) => store?.spinner);
@@ -29,9 +28,9 @@ const SkillsStudy = () => {
 
   if (spinner)
     return (
-      
-          <div className="spin-center"><Spin /></div>
-       
+      <div className="spin-center">
+        <Spin />
+      </div>
     );
 
   return (

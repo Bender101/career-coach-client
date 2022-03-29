@@ -8,7 +8,6 @@ import './styles.modules.css';
 import { MessageTwoTone } from '@ant-design/icons';
 
 function replacer(match, p1, p2, offset, string) {
-  // p1 is nondigits, p2 digits, and p3 non-alphanumerics
   return [p1, p2].join(' ');
 }
 
@@ -17,7 +16,6 @@ const AllReports = () => {
   const allResults = useSelector((store) => store.result.resultAll);
   const dispatch = useDispatch();
 
-  //console.log({allResults});
 
   useEffect(() => {
     dispatch(getAllResultUserAT(user.id));

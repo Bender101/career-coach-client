@@ -9,5 +9,4 @@ Front-end часть проекта "Карьерный коуч" - анализ
 
  npm start
 ```
-
-![Screenshot](coach (1).gif)
+![screenshot](coach%20(1).gif)

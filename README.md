@@ -9,4 +9,4 @@ Front-end часть проекта "Карьерный коуч" - анализ
 
  npm start
 ```
-![Иллюстрация к проекту]https://github.com/Bender101/career-coach-client/blob/master/coach%20(1).gif
+![Image alt]https://github.com/Bender101/career-coach-client/blob/master/coach%20(1).gif

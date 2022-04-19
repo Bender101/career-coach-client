@@ -1,4 +1,4 @@
-// import { Card } from "antd";
+
 import "./Skills.css";
 import React from "react";
 import { Button, Rate } from "antd";
@@ -13,8 +13,6 @@ import {
 } from "../../redux/actions/userSkills";
 
 const Skills = ({ skill, category, user_id, skill_id, rate }) => {
-  // const [stars, setStars] = useState(0);
-
   const dispatch = useDispatch();
   const deleteHandler = async (user_id, skill_id, category) => {
     if (category === "skills") {

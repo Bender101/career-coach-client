@@ -25,7 +25,6 @@ const Skills = ({ skill, category, user_id, skill_id, rate }) => {
   };
 
   const changeHandler = (value) => {
-    // setStars(value);
     dispatch(updateRate({ user_id, skill_id, value }));
   };
 

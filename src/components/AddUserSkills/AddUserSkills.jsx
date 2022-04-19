@@ -100,8 +100,6 @@ const AddUserSkills = () => {
             Добавить
           </Button>
           <hr />
-
-          
             <div className='history-container bgcol-white padd-rl-1em'>
               <div className='profile-history'>
               {allSkills?.map((el) => (
